@@ -86,3 +86,43 @@ dataSources:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
       file: ./src/mapping.ts
+    - kind: ethereum/contract
+    name: Sorare
+    network: mainnet
+    source:
+      address: '0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205'
+      abi: Sorare
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - NFTOwner
+        - NFTBalance
+      abis:
+        - name: Sorare
+          file: ./abis/Sorare.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts
+    - kind: ethereum/contract
+    name: FNDNFT
+    network: mainnet
+    source:
+      address: '0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405'
+      abi: FNDNFT
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - NFTOwner
+        - NFTBalance
+      abis:
+        - name: FNDNFT
+          file: ./abis/FNDNFT.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts
