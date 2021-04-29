@@ -106,7 +106,7 @@ dataSources:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
       file: ./src/mapping.ts
-    - kind: ethereum/contract
+  - kind: ethereum/contract
     name: FNDNFT
     network: mainnet
     source:
