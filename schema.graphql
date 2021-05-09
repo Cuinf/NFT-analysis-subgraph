@@ -1,7 +1,9 @@
 # The general entities for nft tokens.
 type NftOwner @entity {
-  id: ID!
-  owner: Bytes!
+  id: ID! #entity id
+  tokenId: BigInt! #token id
+  owner: Bytes! #owner of the token
+  #contract: Bytes! #contract address
 }
 
 type NftBalance @entity {
