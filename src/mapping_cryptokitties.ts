@@ -5,7 +5,7 @@ import { BigInt } from "@graphprotocol/graph-ts"
 export function handleBirth(event: Birth): void {
     let id = event.transaction.hash.toHex()
     let kitty = new NftOwner(id)
-    kitty.tokenId = event.params.kittyId.toHex()
+    kitty.tokenId = event.params.kittyId
     kitty.owner = event.params.owner
     kitty.save()
 
