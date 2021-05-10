@@ -10,6 +10,7 @@ export function handleTransfer(event: Transfer): void {
     }
     nftOwner.tokenId = event.params.tokenId
     nftOwner.owner = event.params.to
+    nftOwner.contract = event.address
     nftOwner.save()
 
     let previousOwner = event.params.from.toHex()

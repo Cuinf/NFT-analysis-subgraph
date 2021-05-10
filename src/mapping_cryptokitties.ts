@@ -1,12 +1,13 @@
 import { Birth, Transfer } from '../generated/CryptoKitties/CryptoKitties'
 import { NftOwner, NftBalance } from '../generated/schema'
-import { BigInt } from "@graphprotocol/graph-ts"
+import { BigInt, Address } from "@graphprotocol/graph-ts"
 
 export function handleBirth(event: Birth): void {
     let id = event.transaction.hash.toHex()
     let kitty = new NftOwner(id)
     kitty.tokenId = event.params.kittyId
     kitty.owner = event.params.owner
+    kitty.contract = event.address
     kitty.save()
 
     let kittyBalance = new NftBalance(event.params.owner.toHex())
@@ -20,6 +21,7 @@ export function handleTransfer(event: Transfer): void {
     if (kitty == null) {
         kitty = new NftOwner(id)
         kitty.tokenId = event.params.tokenId
+        kitty.contract = event.address
     }
     kitty.owner = event.params.to
     kitty.save()
