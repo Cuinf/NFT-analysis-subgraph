@@ -3,7 +3,7 @@ import { NftOwner, NftBalance } from '../generated/schema'
 import { BigInt } from "@graphprotocol/graph-ts"
 
 export function handleTransfer(event: Transfer): void {
-    let id = event.address.toHex() + '#' + event.params.tokenId.toHex();
+    let id = event.address.toHex() + '#' + event.params.tokenId.toHex()
     let nftOwner = NftOwner.load(id)
     if (nftOwner == null) {
         nftOwner = new NftOwner(id)
