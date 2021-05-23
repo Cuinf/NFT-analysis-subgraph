@@ -32,6 +32,7 @@ export function handleTransfer(event: Transfer): void {
     let contract = CryptoKitties.bind(event.address) 
     let kittyBalance = new NftBalance(event.params.to.toHex())
     kittyBalance.amount = contract.balanceOf(event.params.to)
+    kittyBalance.totalSupply = contract.totalSupply()
     kittyBalance.save()
 
     // let previousOwner = event.params.from.toHex()
