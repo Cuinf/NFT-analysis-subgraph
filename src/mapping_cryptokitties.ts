@@ -3,7 +3,7 @@ import { NftOwner, NftBalance } from '../generated/schema'
 import { BigInt, Address } from "@graphprotocol/graph-ts"
 
 export function handleBirth(event: Birth): void {
-    let id = event.address.toHex() + '#' + event.params.tokenId.toHex()
+    let id = event.address.toHex() + '#' + event.params.kittyId.toHex()
     let kitty = new NftOwner(id)
     kitty.tokenId = event.params.kittyId
     kitty.owner = event.params.owner
@@ -16,7 +16,7 @@ export function handleBirth(event: Birth): void {
 }
 
 export function handleTransfer(event: Transfer): void {
-    let id = event.address.toHex() + '#' + event.params.tokenId.toHex()
+    let id = event.address.toHex() + '#' + event.params.kittyId.toHex()
     let kitty = NftOwner.load(id)
     if (kitty == null) {
         kitty = new NftOwner(id)
