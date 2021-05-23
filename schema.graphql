@@ -9,4 +9,5 @@ type NftOwner @entity {
 type NftBalance @entity {
   id: ID!
   amount: BigInt!
+  totalSupply: BigInt!
 }
