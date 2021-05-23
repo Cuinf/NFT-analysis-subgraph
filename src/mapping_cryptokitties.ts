@@ -16,7 +16,7 @@ export function handleBirth(event: Birth): void {
 }
 
 export function handleTransfer(event: Transfer): void {
-    let id = event.address.toHex() + '#' + event.params.kittyId.toHex()
+    let id = event.address.toHex() + '#' + event.params.tokenId.toHex()
     let kitty = NftOwner.load(id)
     if (kitty == null) {
         kitty = new NftOwner(id)
