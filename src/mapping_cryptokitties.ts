@@ -29,11 +29,11 @@ export function handleTransfer(event: Transfer): void {
     //update the amount of tokens hold by the owner "to"
     //first bind the contract address in order to be able to access the public 
     //methods of the contract
-    let contract = CryptoKitties.bind(event.address) 
-    let kittyBalance = new NftBalance(event.params.to.toHex())
-    kittyBalance.amount = contract.balanceOf(event.params.to)
-    kittyBalance.totalSupply = contract.totalSupply()
-    kittyBalance.save()
+    // let contract = CryptoKitties.bind(event.address) 
+    // let kittyBalance = new NftBalance(event.params.to.toHex())
+    // kittyBalance.amount = contract.balanceOf(event.params.to)
+    // kittyBalance.totalSupply = contract.totalSupply()
+    // kittyBalance.save()
 
     // let previousOwner = event.params.from.toHex()
     // let kittyBalance = NftBalance.load(previousOwner)
