@@ -1,5 +1,5 @@
 import { Birth, Transfer, CryptoKitties } from '../generated/CryptoKitties/CryptoKitties'
-import { NftOwner, NftBalance } from '../generated/schema'
+import { NftOwner } from '../generated/schema'
 import { BigInt, Address } from "@graphprotocol/graph-ts"
 
 export function handleBirth(event: Birth): void {

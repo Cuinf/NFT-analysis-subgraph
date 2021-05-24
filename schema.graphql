@@ -6,8 +6,8 @@ type NftOwner @entity {
   contract: Bytes! #contract address
 }
 
-type NftBalance @entity {
-  id: ID!
-  amount: BigInt!
-  totalSupply: BigInt!
-}
+# type NftBalance @entity {
+#  id: ID!
+#  amount: BigInt!
+#  totalSupply: BigInt!
+#}

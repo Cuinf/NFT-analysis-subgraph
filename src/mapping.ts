@@ -1,5 +1,5 @@
 import { Transfer, ERC721 } from '../generated/Polkamon/ERC721'
-import { NftOwner, NftBalance } from '../generated/schema'
+import { NftOwner } from '../generated/schema'
 import { BigInt } from "@graphprotocol/graph-ts"
 
 export function handleTransfer(event: Transfer): void {
