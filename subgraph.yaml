@@ -16,7 +16,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - NFTOwner
-        - NFTBalance
+      #  - NFTBalance
       abis:
         - name: CryptoKitties
           file: ./abis/CryptoKitties.json
@@ -38,7 +38,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - NFTOwner
-        - NFTBalance
+      #  - NFTBalance
       abis:
         - name: ERC721
           file: ./abis/ERC721.json
@@ -78,7 +78,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - NFTOwner
-        - NFTBalance
+      #  - NFTBalance
       abis:
         - name: ERC721
           file: ./abis/ERC721.json
@@ -98,7 +98,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - NFTOwner
-        - NFTBalance
+      #  - NFTBalance
       abis:
         - name: ERC721
           file: ./abis/ERC721.json
